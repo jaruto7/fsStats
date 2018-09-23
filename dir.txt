@@ -1,1 +1,1 @@
-e:/projects/fsStats/index.js
+Error: ENOTDIR: not a directory, scandir 'E:\Projects\fsStats\dir.txt'
