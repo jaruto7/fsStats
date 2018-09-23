@@ -29,10 +29,10 @@ fs.stat( './cat.jpg', function( err, stats ) {
 //     });
 // });
 
-fs.readdir( './dir.txt', 'utf-8', function( err ) {
+fs.readdir( 'utf-8', function( err, files ) {
     console.log( 'Sciezka do katalogu przed zapisem.'.green );
-    console.log('Output: ', err);
-    fs.writeFile( './dir.txt', err, function( err ) {
+    console.log( 'Output: ', files );
+    fs.writeFile( './dir.txt', files, function( err ) {
         if( err ) throw err;
         console.log( 'Zapisano tekst!'.yellow );
     });
