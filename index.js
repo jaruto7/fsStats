@@ -29,7 +29,7 @@ fs.stat( './cat.jpg', function( err, stats ) {
 //     });
 // });
 
-fs.readdir( 'utf-8', function( err, files ) {
+fs.readdir( './', 'utf-8', function( err, files ) {
     console.log( 'Sciezka do katalogu przed zapisem.'.green );
     console.log( 'Output: ', files );
     fs.writeFile( './dir.txt', files, function( err ) {
