@@ -28,12 +28,17 @@ fs.stat( './cat.jpg', function( err, stats ) {
 //         })
 //     });
 // });
-
+// Odczytaj informacje dotyczace plikow katalogu
 fs.readdir( './', 'utf-8', function( err, files ) {
+    // Powiadom o tym ze metoda readdir probuje odczytac zawartosc katalogu zanim ja zapisze
     console.log( 'Sciezka do katalogu przed zapisem.'.green );
+    // Wyswietl zawartosc katalogu
     console.log( 'Output: ', files );
+    // Zapisz informacje plikow katalogu do pliku tekstowego
     fs.writeFile( './dir.txt', files, function( err ) {
+        // W przypadku gdy zapisanie sie nie powiedzie, wyswietl info o bledzie
         if( err ) throw err;
+        // Wyswietl info ze operacja zapisu sie udala
         console.log( 'Zapisano tekst!'.yellow );
     });
 });
